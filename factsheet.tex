@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{article}
+
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt} 
+\setlength\textwidth{7.0in} 
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+\setlength\parindent{0pt}
+
+\usepackage{charter}
+
+\frenchspacing
+
+\usepackage{graphicx} 
+\usepackage[ngerman]{babel}
+\usepackage{amssymb,amsmath}
+\usepackage{multicol}
+\usepackage{url} 
+\usepackage{enumitem}
+\usepackage{marvosym}
+\usepackage{wrapfig}
+\usepackage[T1]{fontenc}
+\usepackage{datetime}
+\usepackage{url}
+\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage[pdfpagemode=FullScreen, colorlinks=false]{hyperref} 
+\usepackage{blindtext}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%-----------------------------------------------------------
+% Kopf- und Fusszeile
+\lfoot{\footnotesize
+Mischa Knupfer \\
+Andres Minder
+}
+
+\cfoot{Alle Infos auf:\\ \url{https://www.all-electronics.de/messung-der-relativen-luftfeuchtigkeit/}}
+\rfoot{\footnotesize ~\\ Seite \thepage}
+
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} 
+\newcommand{\SepRule}{\noindent	
+\begin{center}
+\rule{250pt}{1pt} 
+\end{center}
+}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+\newcommand{\NewsletterName}[1]{ % Newsletter title
+\begin{center}
+\Huge \usefont{T1}{fvs}{b}{n} % Use the Bera Sans Bold font
+#1
+\end{center}	
+\par \normalsize \normalfont}
+
+\newcommand{\JournalIssue}[1]{ % Date and issue number at the top of the newsletter
+\hfill \textsc{04. Oktober 2018} % Right-aligned date and issue number
+\par \normalsize \normalfont}
+
+\newcommand{\NewsItem}[1]{ % News item title
+\usefont{T1}{fvs}{n}{n} % Use the Bera Sans Normal font
+\vspace{24pt}\large #1\vspace{3pt} % Print the title with space around it in a larger font size
+\par \normalsize \normalfont}
+
+\newcommand{\NewsAuthor}[1]{ % Author name under the item title
+\hfill by \textsc{#1} \vspace{20pt} % Right-aligned author name in small caps with space after it
+\par \normalfont}		
+
+%----------------------------------------------------------------------------------------
+
+%****************************************************************************************
+\begin{document}
+
+\JournalIssue{1} % Issue number
+
+\NewsletterName{Luftfeuchtigkeitssensoren} % Newsletter title
+
+\noindent\HorRule{3pt} \\[-0.75\baselineskip] % Thick horizontal rule
+\HorRule{1pt} % Thin horizontal rule
+
+%----------------------------------------------------------------------------------------
+
+\vspace{0.5cm}
+\SepRule
+\vspace{-0.5cm}
+
+\input{sections/main_first_page}
+
+\vspace{0.5cm}
+\SepRule 
+\vspace{0.5cm}
+
+\input{sections/second_chapter}
+\input{sections/third_chapter}
+
+\end{document}
+%****************************************************************************************
