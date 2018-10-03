@@ -3,7 +3,7 @@
 \setlength\topmargin{-48pt}
 \setlength\headheight{0pt} 
 \setlength\textwidth{7.0in} 
-\setlength\textheight{9.5in}
+\setlength\textheight{25cm}
 \setlength\oddsidemargin{-30pt}
 \setlength\evensidemargin{-30pt}
 \setlength\parindent{0pt}
@@ -22,22 +22,34 @@
 \usepackage{wrapfig}
 \usepackage[T1]{fontenc}
 \usepackage{datetime}
+\usepackage{booktabs}
+\usepackage{caption}
 \usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
 \usepackage[pdfpagemode=FullScreen, colorlinks=false]{hyperref} 
 \usepackage{blindtext}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+\bibliographystyle{IEEEtran}
+
 %-----------------------------------------------------------
 % Kopf- und Fusszeile
+\lhead{}
+\chead{}
+\rhead{}
 \lfoot{\footnotesize
 Mischa Knupfer \\
 Andres Minder
 }
 
-\cfoot{Alle Infos auf:\\ \url{https://www.all-electronics.de/messung-der-relativen-luftfeuchtigkeit/}}
-\rfoot{\footnotesize ~\\ Seite \thepage}
+\cfoot{\footnotesize ~\\ Seite \thepage}
+\rfoot{\footnotesize 
+FHNW Brugg/Windisch \\
+04. Oktober 2018
+}
 
 \renewcommand{\headrulewidth}{0.0pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -61,7 +73,7 @@ Andres Minder
 \par \normalsize \normalfont}
 
 \newcommand{\JournalIssue}[1]{ % Date and issue number at the top of the newsletter
-\hfill \textsc{04. Oktober 2018} % Right-aligned date and issue number
+\hfill \textsc{} % Right-aligned date and issue number
 \par \normalsize \normalfont}
 
 \newcommand{\NewsItem}[1]{ % News item title
@@ -87,19 +99,14 @@ Andres Minder
 
 %----------------------------------------------------------------------------------------
 
-\vspace{0.5cm}
-\SepRule
-\vspace{-0.5cm}
-
 \input{sections/main_first_page}
-
 \vspace{0.5cm}
-\SepRule 
-\vspace{0.5cm}
-
 \input{sections/second_chapter}
 \input{sections/third_chapter}
 \input{sections/fourth_chapter}
 
+\small{
+\bibliography{literatur/bibliography}
+}
 \end{document}
 %****************************************************************************************
